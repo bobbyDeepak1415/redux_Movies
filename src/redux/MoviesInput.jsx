@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { addMovie } from './MoviesSlice'
 
 const MoviesInput = () => {
 
-    const [newMovie,setNewMovie]
+    const [newMovie,setNewMovie]=useState("")
 
     const dispatch=useDispatch()
 
 
     const handleAddMovie=()=>{
-
+if(!newMovie.trim()) return
+dispatch(addMovie(newMovie))
+setNewMovie("")
     }
 
   return (
