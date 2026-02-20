@@ -15,4 +15,6 @@ addMovie:()=>{
 })
 
 
-export const {addMovie}=MoviesSlice.reducer
+export const {addMovie}=MoviesSlice.actions
+
+export default MoviesSlice.reducer

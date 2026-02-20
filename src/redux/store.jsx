@@ -4,5 +4,7 @@ import {MoviesReducer} from './MoviesSlice'
 
 
 export const store=configureStore({
-    reducer:{MoviesReducer}
+    reducer:{
+        moviesList:MoviesReducer
+    }
 })
