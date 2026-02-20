@@ -3,11 +3,19 @@ import { useDispatch } from 'react-redux'
 
 const MoviesInput = () => {
 
+    const [newMovie,setNewMovie]
+
     const dispatch=useDispatch()
+
+
+    const handleAddMovie=()=>{
+
+    }
 
   return (
     <div>
-      <input value={()=>dispatch(set)}></input>
+      <input value={newMovie}></input>
+      <button onClick={handleAddMovie}>Add</button>
     </div>
   )
 }
