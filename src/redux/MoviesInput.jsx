@@ -12,7 +12,7 @@ const MoviesInput = () => {
     if (!newMovie.trim()) return;
     dispatch(addMovie(newMovie));
     setNewMovie("");
-  };
+  };...
 
   return (
     <div>
