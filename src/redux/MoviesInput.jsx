@@ -1,26 +1,28 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { addMovie } from './MoviesSlice'
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addMovie } from "./MoviesSlice";
 
 const MoviesInput = () => {
+  const [newMovie, setNewMovie] = useState("");
+  const [moviesList, setMoviesList] = useState([]);
 
-    const [newMovie,setNewMovie]=useState("")
+  const dispatch = useDispatch();
 
-    const dispatch=useDispatch()
-
-
-    const handleAddMovie=()=>{
-if(!newMovie.trim()) return
-dispatch(addMovie(newMovie))
-setNewMovie("")
-    }
+  const handleAddMovie = () => {
+    if (!newMovie.trim()) return;
+    dispatch(addMovie(newMovie));
+    setNewMovie("");
+  };
 
   return (
     <div>
-      <input value={newMovie}></input>
+      <input
+        onChange={(e) => setNewMovie(e.target.value)}
+        value={newMovie}
+      ></input>
       <button onClick={handleAddMovie}>Add</button>
     </div>
-  )
-}
+  );
+};
 
-export default MoviesInput
+export default MoviesInput;
