@@ -12,7 +12,9 @@ const MoviesList = () => {
         return (
           <li key={movie.id}>
             {movie.name}
-            <button onClick={() => dispatch(removeMovie(movie.id))}>Remove</button>
+            <button onClick={() => dispatch(removeMovie(movie.id))}>
+              Remove
+            </button>
           </li>
         );
       })}
