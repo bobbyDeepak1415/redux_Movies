@@ -15,9 +15,13 @@ const MoviesSlice = createSlice({
       state.value
       
     },
+    removeMovie: (state) => {
+      state.value
+      
+    },
   },
 });
 
-export const { addMovie } = MoviesSlice.actions;
+export const { addMovie,removeMovie } = MoviesSlice.actions;
 
 export default MoviesSlice.reducer;
