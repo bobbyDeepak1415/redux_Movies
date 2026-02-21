@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
- value:"StarWars"
+ value:[
+  {id:0,name:"Starwars"},
+  {id:1,name:"StarTrek"}
+ ]
 };
 
 const MoviesSlice = createSlice({
@@ -9,6 +12,7 @@ const MoviesSlice = createSlice({
   initialState,
   reducers: {
     addMovie: (state) => {
+      state.value
       
     },
   },
