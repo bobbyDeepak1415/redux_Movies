@@ -11,8 +11,11 @@ const MoviesSlice = createSlice({
   name: "MoviesApp",
   initialState,
   reducers: {
-    addMovie: (state) => {
-      state.value
+    addMovie: (state,action) => {
+
+      const newMovie={
+        id:state.value.length ? state.value
+      }
       
     },
     removeMovie: (state) => {
