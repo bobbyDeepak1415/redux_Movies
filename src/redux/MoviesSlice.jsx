@@ -11,9 +11,15 @@ const MoviesSlice = createSlice({
   name: "MoviesApp",
   initialState,
   reducers: {
-    addMovie: (state, action) => {},
-    removeMovie: (state) => {
-      state.value;
+    addMovie: (state, action) => {
+      const newMovie = {
+        id: state.value.length ? state.value[state.value.length - 1].id + 1 : 0,
+        name: action.payload,
+      };
+      state.value.push(newMovie);
+    },
+    removeMovie: (state, action) => {
+      state.value = state.value.filter((movie) => movie.id !== action.payload);
     },
   },
 });
