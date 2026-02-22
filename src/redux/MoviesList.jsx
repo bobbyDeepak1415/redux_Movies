@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addMovie, removeMovie } from "./MoviesSlice";
+import { removeMovie } from "./MoviesSlice";
 
 const MoviesInput = () => {
   const movies = useSelector((state) => state.moviesist.value);
+
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -12,7 +14,7 @@ const MoviesInput = () => {
           <li key={movie.id}>
             {movie.name}
 
-            <button onClick={removeMovie}>Delete</button>
+            <button onClick={() => dispatch(removeMovie(movie.id))}>Delete</button>
           </li>
         );
       })}
