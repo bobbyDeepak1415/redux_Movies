@@ -1,9 +1,8 @@
-import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeMovie } from "./MoviesSlice";
 
 const MoviesInput = () => {
-  const movies = useSelector((state) => state.moviesist.value);
+  const movies = useSelector((state) => state.moviesList.value);
 
   const dispatch = useDispatch();
 

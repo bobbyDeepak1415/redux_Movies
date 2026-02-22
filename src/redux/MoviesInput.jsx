@@ -4,7 +4,6 @@ import { addMovie } from "./MoviesSlice";
 
 const MoviesInput = () => {
   const [newMovie, setNewMovie] = useState("");
-  const [moviesList, setMoviesList] = useState([]);
 
   const dispatch = useDispatch();
 
